@@ -4,10 +4,11 @@ import JobProblem from "./problems/Job Listings Dashboard/JobProblem";
 import { route } from "./utils/constant";
 import DemoProblem from "./problems/DemoProblem/DemoProblem";
 
+
 export const router = createBrowserRouter([{
     path: "/",
     element: <MainLayout />,
-    children: [
+    children: [ // this replaces the <Outlet />
         {
             index: true,
             element:<>Need to work on this <JobProblem /> </>, // improve
