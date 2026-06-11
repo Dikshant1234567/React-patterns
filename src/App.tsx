@@ -1,21 +1,9 @@
-import { useState } from 'react'
-import Button from './components/ui/button'
+
+import MainLayout from './layouts/MainLayout'
 
 function App() {
-  let isOpen= false
-
   return (
-    <>
-      <Button onClick={() => alert("hii")} variant='link' size={'lg'}>click me</Button>
-      <Button
-        // size="icon"
-        aria-label="Open menu"
-        aria-expanded={isOpen}
-        data-state={isOpen ? "open" : "closed"}
-      >
-        ☰
-      </Button>
-    </>
+   <MainLayout/>
   )
 }
 
