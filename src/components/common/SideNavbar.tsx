@@ -1,17 +1,30 @@
 
+import { NavLink } from "react-router-dom"
+import { route } from "../../utils/constant"
+
 function SideNavbar() {
     const navItem = [
-        "PROBLEM 1",
-        "PROBLEM 2",
-        "PROBLEM 3",
-        "PROBLEM 4",
-        "PROBLEM 5",
-        "PROBLEM 6",
-        "PROBLEM 7",
+        { label: "PROBLEM 1", path: route.prblm1 },
+        { label: "PROBLEM 2", path: route.prblm2 },
     ]
+
     return (
-        <nav className="text-white">
-            {navItem.map(item => <p className="cursor-pointer">{item}</p>)}
+        <nav className="flex flex-col gap-2 text-white">
+            {navItem.map((item) => (
+                <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                        `rounded px-3 py-2 transition-colors ${
+                            isActive
+                                ? "bg-white text-neutral-900"
+                                : "hover:bg-neutral-700"
+                        }`
+                    }
+                >
+                    {item.label}
+                </NavLink>
+            ))}
         </nav>
     )
 }

@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom"
 import SideNavbar from "../components/common/SideNavbar"
 
 function MainLayout() {
@@ -7,7 +8,7 @@ function MainLayout() {
             <SideNavbar/>
         </div>
         <div className="right bg-neutral-100 w-full p-2">
-            content dknknk
+           <Outlet />
         </div>
       
     </main>
