@@ -7,7 +7,7 @@ function MainLayout() {
         <div className="left bg-neutral-900  w-[20%] p-4 ">
             <SideNavbar/>
         </div>
-        <div className="right bg-neutral-100 w-full p-2">
+        <div className="right bg-neutral-100 w-full p-6">
            <Outlet />
         </div>
       
